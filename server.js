@@ -14,7 +14,7 @@ var tcpServer = net.createServer(function(socket){
 
 		console.log('TCP Data received: ' + message + ' from: ' + tcp);
 
-		udpServer.send(messageToSend, 0, messageToSend.length, 47473, '192.168.1.105', function(error){
+		udpServer.send(messageToSend, 0, messageToSend.length, 47473, 'IP_ADDRESS', function(error){
 			if(error){ udpServer.close(); }
 			else{ console.log('UDP Messsage Sent !!!'); }
 		});
