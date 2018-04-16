@@ -1,12 +1,12 @@
 var PORT = 47473;
 var TCP_PORT = 47474;
-var HOST = '192.168.1.112';
+var HOST = 'IP_ADDRESS';
 var dgram = require('dgram');
 var net = require('net');
 
 // TCP Client - POLL client
 var client = new net.Socket();
-client.connect(TCP_PORT, '192.168.1.112', function() {
+client.connect(TCP_PORT, 'IP_ADDRESS', function() {
 	console.log('TCP Connected');
 	client.write('POLL');
 });
